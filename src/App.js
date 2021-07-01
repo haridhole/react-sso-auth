@@ -29,7 +29,7 @@ class App extends Component {
       <BrowserRouter>
         <ToastContainer />
         <NavBar user={user} />
-        <main className="container">
+        <main>
           <Switch>
             <Route path="/register" component={RegisterForm} />
             <Route path="/login" component={LoginForm} />

@@ -3,39 +3,39 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = ({ user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-        {user && (<NavLink className="nav-item nav-link" to="/home">
+    <nav>
+      <div id="navbarNavAltMarkup">
+        <div>
+        {user && (<NavLink to="/home">
             HomePage
           </NavLink>)}
           &nbsp;
-        {user && user.isAdmin && (<NavLink className="nav-item nav-link" to="/admin">
+        {user && user.isAdmin && (<NavLink to="/admin">
             AdminPage
           </NavLink>)}
           &nbsp;
-        {user && !user.isAdmin && (<NavLink className="nav-item nav-link" to="/user">
+        {user && !user.isAdmin && (<NavLink to="/user">
             UserPage
           </NavLink>)}
           &nbsp;
           {!user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link" to="/login">
+              <NavLink to="/login">
                 Login
               </NavLink>
               &nbsp;
-              <NavLink className="nav-item nav-link" to="/register">
+              <NavLink to="/register">
                 Register
               </NavLink>
             </React.Fragment>
           )}
           {user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link" to="/profile">
+              <NavLink to="/profile">
                 {user.name}
               </NavLink>
               &nbsp;
-              <NavLink className="nav-item nav-link" to="/logout">
+              <NavLink to="/logout">
                 Logout
               </NavLink>
             </React.Fragment>
